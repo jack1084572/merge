@@ -1,0 +1,88 @@
+nohup: ignoring input
+
+> frontend@0.0.0 dev
+> vite --host
+
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+
+  VITE v7.0.6  ready in 171 ms
+
+  ➜  Local:   http://localhost:5175/
+  ➜  Network: http://10.0.0.135:5175/
+6:10:50 AM [vite] (client) hmr update /src/pages/Home.tsx
+6:10:51 AM [vite] Internal server error: /workspaces/merge/worke-spce2/modu-platform/frontend/src/pages/Home.tsx: Unterminated string constant. (14:10)
+
+  12 |
+  13 |   useEffect(() => {
+> 14 |     fetch('fetch("http://localhost:8000/posts")
+     |           ^
+  15 | ')
+  16 |       .then(res => {
+  17 |         if (!res.ok) throw new Error(`HTTP error! ${res.status}`);
+  Plugin: vite:react-babel
+  File: /workspaces/merge/worke-spce2/modu-platform/frontend/src/pages/Home.tsx:14:10
+  12 |  
+  13 |    useEffect(() => {
+  14 |      fetch('fetch("http://localhost:8000/posts")
+     |            ^
+  15 |  ')
+  16 |        .then(res => {
+      at constructor (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at TypeScriptParserMixin.raise (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:6627:19)
+      at Object.unterminated (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:5692:20)
+      at readStringContents (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:5434:16)
+      at TypeScriptParserMixin.readString (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:6526:9)
+      at TypeScriptParserMixin.getTokenFromCode (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:6286:14)
+      at TypeScriptParserMixin.getTokenFromCode (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:4827:11)
+      at TypeScriptParserMixin.getTokenFromCode (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:10004:11)
+      at TypeScriptParserMixin.nextToken (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:5810:10)
+      at TypeScriptParserMixin.next (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:5720:10)
+      at TypeScriptParserMixin.parseCoverCallAndAsyncArrowHead (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:11164:10)
+      at TypeScriptParserMixin.parseSubscript (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:11115:19)
+      at TypeScriptParserMixin.parseSubscript (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:9353:18)
+      at TypeScriptParserMixin.parseSubscripts (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:11089:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:11080:17)
+      at TypeScriptParserMixin.parseUpdate (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOps (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:10899:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:10826:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:9801:20)
+      at TypeScriptParserMixin.parseExpressionBase (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:10779:23)
+      at /workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:10775:39
+      at TypeScriptParserMixin.allowInAnd (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:12422:16)
+      at TypeScriptParserMixin.parseExpression (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:10775:17)
+      at TypeScriptParserMixin.parseStatementContent (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:12895:23)
+      at TypeScriptParserMixin.parseStatementContent (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:9527:18)
+      at TypeScriptParserMixin.parseStatementLike (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:12767:17)
+      at TypeScriptParserMixin.parseStatementListItem (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:12747:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:13316:61)
+      at TypeScriptParserMixin.parseBlockBody (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:13309:10)
+      at TypeScriptParserMixin.parseBlock (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:13297:10)
+      at TypeScriptParserMixin.parseFunctionBody (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:12101:24)
+      at TypeScriptParserMixin.parseArrowExpression (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:12076:10)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:11686:12)
+      at TypeScriptParserMixin.parseExprAtom (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:11326:23)
+      at TypeScriptParserMixin.parseExprAtom (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:4794:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:11076:23)
+      at TypeScriptParserMixin.parseUpdate (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:11061:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:11041:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:9852:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:10894:61)
+      at TypeScriptParserMixin.parseExprOps (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:10899:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:10876:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:10826:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:9801:20)
+      at /workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:10795:39
+      at TypeScriptParserMixin.allowInAnd (/workspaces/merge/worke-spce2/modu-platform/frontend/node_modules/@babel/parser/lib/index.js:12427:12)
+6:10:52 AM [vite] (client) hmr update /src/pages/Home.tsx
+6:10:58 AM [vite] (client) hmr update /src/pages/Home.tsx
+6:23:03 AM [vite] (client) hmr update /src/pages/Home.tsx
+6:23:11 AM [vite] (client) hmr update /src/pages/Home.tsx
+6:23:15 AM [vite] (client) hmr update /src/pages/Home.tsx
+6:25:07 AM [vite] (client) hmr update /src/pages/Home.tsx
+6:35:44 AM [vite] (client) hmr update /src/pages/Home.tsx
+6:36:04 AM [vite] (client) hmr update /src/pages/Home.tsx

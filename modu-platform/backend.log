@@ -1,0 +1,6 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/workspaces/merge/worke-spce2/modu-platform/backend/app/main.py", line 2, in <module>
+    from flask_cors import CORS  # type: ignore # 允许跨域请求
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'flask_cors'
