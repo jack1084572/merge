@@ -1,12 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
-import { Home } from './pages/Home'  // ✅ 关键在这一行
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import App from './App.tsx';
+import { Home } from './pages/Home';
+import { Auth } from './pages/Auth';  // 添加此行
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />
     <Home />
-  </StrictMode>,
-)
+    <Auth />  {/* 渲染登录组件 */}
+  </StrictMode>
+);
