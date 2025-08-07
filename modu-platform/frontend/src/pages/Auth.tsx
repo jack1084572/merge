@@ -1,10 +1,14 @@
 // src/pages/Auth.tsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 export const Auth: React.FC = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+
+  const navigate = useNavigate();
 
   const handleLogin = async () => {
     try {
@@ -16,8 +20,14 @@ export const Auth: React.FC = () => {
 
       const data = await res.json();
       if (res.ok) {
-        localStorage.setItem('token', data.token); // 保存 token
-        setMessage(`✅ 登录成功！Token: ${data.token}`);
+        localStorage.setItem('token', data.token);          // ✅ 保存 token
+        localStorage.setItem('username', username);         // ✅ 保存用户名
+        setMessage(`✅ 登录成功！Token: ${data.token} username: ${username}`);
+        //navigate('pages/Admin.html');  
+         //window.location.href = '/pages/Admin.html';
+        // window.open('/pages/Admin.html'); // ✅ 打开新窗口
+       // alert("后台管理页面\n欢迎登录！这是管理员界面。");
+
       } else {
         setMessage(data.error || '登录失败');
       }
@@ -42,7 +52,10 @@ export const Auth: React.FC = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleLogin} className="bg-blue-500 text-white px-4 py-2 rounded w-full">
+      <button
+        onClick={handleLogin}
+        className="bg-blue-500 text-white px-4 py-2 rounded w-full"
+      >
         登录
       </button>
       <p className="mt-4 text-red-600">{message}</p>
