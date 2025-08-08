@@ -21,7 +21,7 @@ export const Admin: React.FC = () => {
     }
 
     // ✅ 直接打开已有的 Admin.html 页面
-    window.open('https://ideal-trout-wrx945469wqwhg696-5173.app.github.dev/Admin.html', '_blank');
+    window.open('https://laughing-zebra-r4wrx6x9rqjpcpjg5-5174.app.github.dev/Admin.html', '_blank');
   };
 
   return (

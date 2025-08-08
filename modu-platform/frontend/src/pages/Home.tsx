@@ -11,7 +11,7 @@ export const Home: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('https://ideal-trout-wrx945469wqwhg696-8000.app.github.dev/posts')
+    fetch('https://laughing-zebra-r4wrx6x9rqjpcpjg5-8000.app.github.dev/posts')
       .then(res => {
         if (!res.ok) throw new Error(`HTTP error! ${res.status}`);
         return res.json();

@@ -12,7 +12,7 @@ export const Auth: React.FC = () => {
 
   const handleLogin = async () => {
     try {
-      const res = await fetch('https://ideal-trout-wrx945469wqwhg696-8000.app.github.dev/login', {
+      const res = await fetch('https://laughing-zebra-r4wrx6x9rqjpcpjg5-8000.app.github.dev/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
